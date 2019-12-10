@@ -1,0 +1,70 @@
+#Check whether entered Integer/String is Palindrome 
+
+#1
+a=int(input("Enter no a:")) #123
+c=0
+x=a
+while(a!=0):          #true
+    b=int(a%10)            #3  #2   #1
+    c=c*10+b               #3  #32  #321
+    a=int(a/10)                #12  #1
+print(c)
+if(x==c):
+    print("a is pallindrome")
+else:
+    print("a is not a pallindrome")
+    
+
+#2   
+a=(input("Enter the string: ")) # Man
+a=a.casefold()  #man
+r=reversed(a)   #nam
+if list(a)==list(r): #false
+    print("is a pallindrome")
+else:
+    print("not a pallindorme") #print
+    
+
+
+#Check the count of occurance of vowel in entered String
+
+a=(input("Enter the string: ")) #umEed
+b="AaEeIiOoUu"
+c=0
+x=len(a)  #5
+for i in range(0,x): 
+    for j in range(0,10):
+        if(a[i]==b[j]):
+            c=c+1          #for u,E,e
+print(c) #thrice
+
+
+
+#Sort the words in a sentence alphabetically
+
+my_str=(input("Enter a SENTENCE: "))  #We Are learning split and sort
+words=my_str.split()   #['We', 'Are', 'learning', 'split', 'and', 'sort']
+words.sort()
+for word in words:
+    print(word) 
+"""
+Are
+We
+and
+learning
+sort
+split
+"""
+
+
+#WAP to remove punctuations in the given string
+
+punctuation=".?,&^"   #string with all punctuations
+my_str=(input("Enter a SENTENCE with punctuations: "))  #Hello.. there ??? Umeed...
+no_punct=" "          #empty string
+for char1 in my_str:
+    if char1 not in punctuation:  #checking each character to not to be a punctuation
+        no_punct=no_punct+char1   #concat empty and character without punctuation string
+print(no_punct)  # Hello there  Umeed
+
+

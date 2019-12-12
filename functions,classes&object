@@ -1,0 +1,98 @@
+#max from 2 num using function
+def max(a,b):
+    if(a>b):
+        return(a)
+    else:
+        return(b)
+print("max value is: ")
+print(max(22,37))
+
+
+
+#square of num using lambda
+a=lambda x:x**2
+print(a(12))
+
+
+
+#class
+class a:
+    def a1():
+        print("Inside Class's Function")
+a.a1() #function call without obj
+
+
+#class&obj
+class A:
+    x=2
+    def disp(self):
+        print(self.x)
+a1=A() #instance 
+a1.disp() #call funct through instance
+
+
+#class constructor and member function
+class add:
+    def __init__(self,a,b):
+        self.x=a
+        self.y=b
+    def disp(self):
+        print(self.x+self.y)
+
+a=add(23,4)
+a.disp()
+
+
+
+#class emp with data members id,name,salary!enter detail and display.
+class emp:
+    def detail(self):
+        self.id=int(input("enterd id: "))
+        self.name=str(input("enter name: "))
+        self.salary=float(input("enter salary: "))
+    def display(self):
+        print("Id: ",end=" ")
+        print(self.id)
+        print("name: ",end=" ")
+        print(self.name)
+        print("salary: ",end=" ")
+        print(self.salary)
+o1=emp()
+o2=emp()
+o1.detail()
+o1.display()
+o2.detail()
+o2.display()
+        
+
+#student info,subject marks avg calculate
+class student:
+    def info(self):
+        self.roll=int(input("enter Roll:"))
+        self.name=str(input("enter Name:"))
+        self.year=int(input("enter Year:"))
+    def info1(self):
+        self.sub1=str(input("Sub name:"))
+        self.marks1=float(input("Marks:"))
+        self.sub2=str(input("Sub name:"))
+        self.marks2=float(input("Marks:"))
+        self.sub3=str(input("Sub name:"))
+        self.marks3=float(input("Marks:"))
+    def calculate(self):
+        self.avg=(self.marks1+self.marks2+self.marks3)/3
+    def display(self):
+        print()
+        print("Roll:",end=" ")
+        print(self.roll)
+        print("Name:",end=" ")
+        print(self.name)
+        print("Year:",end=" ")
+        print(self.year)
+        print("Average Marks:",end=" ")
+        print(self.avg)
+o=student()
+o.info()
+o.info1()
+o.calculate()
+o.display()
+    

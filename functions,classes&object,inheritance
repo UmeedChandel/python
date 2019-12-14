@@ -40,6 +40,7 @@ print(max(22,37))
 
 
 
+
 #square of num using lambda
 a=lambda x:x**2
 print(a(12))
@@ -127,3 +128,45 @@ o.info1()
 o.calculate()
 o.display()
     
+    
+    
+    
+ #single inheritance   
+    class add:
+    def enter(self):   #base class
+        self.a=float(input("enter number a:"))
+        self.b=float(input("enter number b:"))
+class disp(add):      #derived class
+    def show(self):
+        self.c=self.a+self.b
+        print("Sum is:",self.c)
+o=disp()
+o.enter()
+o.show()
+
+
+
+#hybrid inheritance
+#multilevel and multiple
+class std: 
+    def info1(self):
+        self.roll=str(input("Enter Roll no.:"))
+        self.name=str(input("Enter Name:"))
+class marks(std):
+    def info2(self):
+        self.m1=float(input("Enter sub1 marks:"))
+        self.m2=float(input("Enter sub2 marks:"))
+class sports:
+    def info3(self):
+        self.m3=float(input("Enter sports marks:"))
+class result(marks,sports):
+    def disp(self):
+        print("Roll np.:",self.roll)
+        print("Name:",self.name)
+        self.avg=(self.m1+self.m2+self.m3)/3
+        print("Average Marks:",self.avg)
+o=result()
+o.info1()
+o.info2()
+o.info3()
+o.disp()

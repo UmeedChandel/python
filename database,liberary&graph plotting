@@ -1,0 +1,92 @@
+#made a data base
+s=['Umeed','Tulika','Priyansh']
+m=[34,25,45]
+a=[18,17,19]
+d={'Name:':s,'Marks:':m,'Age:':a}
+d #print the dictionary
+
+"""
+Pandas:open source python library
+provide heigh performance 
+*data manipultions
+*analysis tool
+using data structure:
+ series
+ data frame
+ panel
+
+Data frame
+ 2D array(rows,columns)
+ standard way to store data
+ tabural data
+  row=store info
+  column=name the info
+"""
+
+#import Pandas liberary
+import pandas as pd
+?pd.DataFrame #  '?' display help guide 
+
+
+#shows the result in a graph using matplotlib
+import matplotlib as plt
+?plt
+#activate the diaplay graph mode
+%matplotlib inline
+
+
+#using obj of Data Frame (df) liberary
+#first req is data source and second column
+df = pd.DataFrame(data=d)
+df #print data in tabular form
+
+#to plot a graph
+df.plot()
+
+#creating new data frame from another df
+df1=df[['Age:','Marks:']]
+print(df1)
+df.plot()
+
+#manipulating the data base
+#retrive data in particular range
+df[df['Marks:']>25]
+df[(df['Age:']>17)&(df['Marks:']>15)][['Name:','Age:']]
+f[(df['Age:']>12)&(df['Name:']=='Tulika')][['Name:','Age:']]
+
+
+
+
+#CSV comma seprated values
+data=pd.read_csv("D:\\G.csv")
+print("data in the cvs file: ")
+data
+passs=data[(data['hours']>4)&(data['grade']>70)]
+print("data after manipulation in the cvs file: ")
+print(passs)
+print(data.columns)
+passs.plot()
+
+
+
+#another cvs file
+task=pd.read_csv("D:\\file.csv")
+print(task)
+task.plot()
+
+#to plot bar graph
+task.plot.bar(x = 'name', y = ['marks'],color = ['red'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+

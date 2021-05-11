@@ -1,4 +1,4 @@
-# python
+# Python
 Python Basic Code
 
 ## Topics  Covered:
